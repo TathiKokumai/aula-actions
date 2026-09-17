@@ -1,0 +1,23 @@
+name: Verificação do Projeto
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Exibir mensagem
+        run: echo "Iniciando verificação do projeto..."
+
+      - name: Listar arquivos
+        run: ls -la
+
+      - name: Finalizar
+        run: echo "Verificação concluída com sucesso!"
